@@ -4,102 +4,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atendimento - Chat</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="dist/styles.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
-    <div class="dashboard-container">
-        <aside class="sidebar" id="sidebar">
-            <div class="sidebar-header"><h2>App Logo</h2></div>
-            <nav class="sidebar-nav">
-                <ul>
-                    <li class="nav-item"><a href="index.html"><i class="fas fa-home"></i> <span>Home</span></a></li>
-                    <li class="nav-item"><a href="graficos.html"><i class="fas fa-chart-line"></i> <span>Gráficos</span></a></li>
-                    <li class="nav-item">
-                        <a href="contatos.html" class="dropdown-toggle"><i class="fas fa-address-book"></i> <span>Contatos</span> <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="contatos.html#cadastrar">Cadastrar</a></li>
-                            <li><a href="contatos.html#importar">Importar</a></li>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-50">
+    <div class="flex min-h-dvh">
+        <aside class="w-[250px] shadow-lg bg-white dark:bg-gray-800 transition-[width,min-width] duration-300 ease flex-shrink-0 min-w-[250px] md:relative fixed h-dvh z-50 transform -translate-x-full md:translate-x-0" id="sidebar">
+            <div class="p-5 h-[60px] flex items-center border-b border-gray-200 dark:border-gray-700">
+                <h2 class="text-xl font-semibold text-blue-600 dark:text-blue-400">App Logo</h2>
+            </div>
+            <nav class="p-0">
+                <ul class="list-none py-2 px-0">
+                    <li class="nav-item relative"><a href="index.html" class="flex items-center p-3 px-5 text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 whitespace-nowrap"><i class="fas fa-home text-lg w-7"></i> <span class="ml-2">Home</span></a></li>
+                    <li class="nav-item relative"><a href="graficos.html" class="flex items-center p-3 px-5 text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 whitespace-nowrap"><i class="fas fa-chart-line text-lg w-7"></i> <span class="ml-2">Gráficos</span></a></li>
+                    <li class="nav-item relative">
+                        <a href="contatos.html" class="dropdown-toggle flex items-center p-3 px-5 text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer whitespace-nowrap">
+                            <i class="fas fa-address-book text-lg w-7"></i> <span class="ml-2">Contatos</span> <i class="fas fa-chevron-down dropdown-icon ml-auto text-sm transition-transform duration-300"></i>
+                        </a>
+                        <ul class="dropdown-menu list-none bg-gray-50 dark:bg-gray-700 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <li><a href="contatos.html#cadastrar" class="block py-2 px-10 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600">Cadastrar</a></li>
+                            <li><a href="contatos.html#importar" class="block py-2 px-10 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600">Importar</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item active"><a href="atendimento.html"><i class="fas fa-headset"></i> <span>Atendimento</span></a></li>
-                    <li class="nav-item">
-                        <a href="cadastros_gerais.html" class="dropdown-toggle"><i class="fas fa-cog"></i> <span>Cadastros Gerais</span> <i class="fas fa-chevron-down dropdown-icon"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="cadastros_gerais.html#usuarios">Usuários</a></li>
-                            <li><a href="cadastros_gerais.html#times">Times</a></li>
-                            <li><a href="cadastros_gerais.html#lead">Lead</a></li>
+                    <li class="nav-item relative active transition-all duration-200">
+                        <a href="atendimento.html" class="flex items-center p-3 px-5 bg-blue-600 dark:bg-blue-700 hover:bg-blue-800 whitespace-nowrap text-white">
+                            <i class="fas fa-headset text-lg w-7"></i> 
+                            <span class="ml-2">Atendimento</span>
+                        </a>
+                    </li>
+                    <li class="nav-item relative">
+                        <a href="cadastros_gerais.html" class="dropdown-toggle flex items-center p-3 px-5 text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer whitespace-nowrap">
+                            <i class="fas fa-cog text-lg w-7"></i> <span class="ml-2">Cadastros Gerais</span> <i class="fas fa-chevron-down dropdown-icon ml-auto text-sm transition-transform duration-300"></i>
+                        </a>
+                        <ul class="dropdown-menu list-none bg-gray-50 dark:bg-gray-700 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <li><a href="cadastros_gerais.html#usuarios" class="block py-2 px-10 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600">Usuários</a></li>
+                            <li><a href="cadastros_gerais.html#times" class="block py-2 px-10 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600">Times</a></li>
+                            <li><a href="cadastros_gerais.html#lead" class="block py-2 px-10 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600">Lead</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </aside>
 
-        <main class="main-content">
-            <header class="main-header">
-		<div class="header-left">
-                    <button class="toggle-btn" id="toggle-sidebar-btn"><i class="fas fa-bars"></i></button>
-                    <h1>Página Inicial</h1>
+        <main class="flex-grow flex flex-col">
+            <header class="bg-white dark:bg-gray-800 h-[60px] flex items-center justify-between px-5 shadow-md sticky top-0 z-10 border-b border-gray-200 dark:border-gray-700">
+                <div class="flex items-center">
+                    <button class="bg-transparent border-none text-2xl text-blue-600 dark:text-blue-400 cursor-pointer mr-5 focus:outline-none" id="toggle-sidebar-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Atendimento (Chat)</h1>
                 </div>
                 
-                <button class="theme-toggle-btn" id="theme-toggle-btn">
+                <button class="bg-transparent border-none text-xl text-gray-700 dark:text-gray-100 cursor-pointer p-2 rounded hover:text-blue-600 dark:hover:text-blue-400" id="theme-toggle-btn">
                     <i class="fas fa-sun"></i>
                 </button>
             </header>
             
-            <div class="content-area chat-layout">
-                <div class="chat-sidebar">
-                    <h3>Conversas</h3>
-                    <ul class="conversation-list">
-                        <li class="conversation-item active">
-                            <span class="user-avatar">C</span>
-                            <div class="user-info">
-                                <h4>Cliente Exemplo 1</h4>
-                                <p>Última mensagem...</p>
+            <div class="p-5 flex-grow flex flex-col md:flex-row gap-5 h-[calc(100vh-60px)] md:h-auto">
+                <div class="w-full md:w-80 bg-white dark:bg-gray-800 rounded-lg shadow-lg p-3 flex-shrink-0 overflow-y-auto h-52 md:h-auto">
+                    <h3 class="text-lg font-semibold text-blue-600 dark:text-blue-400 mb-2 pb-1 border-b border-gray-200 dark:border-gray-700">Conversas</h3>
+                    <ul class="list-none p-0">
+                        <li class="flex items-center p-3 cursor-pointer rounded-md  mb-1 bg-gray-100 dark:bg-gray-700 border-l-4 border-blue-600 dark:border-blue-400">
+                            <span class="w-10 h-10 rounded-full bg-blue-600 dark:bg-blue-400 text-white flex items-center justify-center font-bold mr-3 flex-shrink-0">C</span>
+                            <div class="flex flex-col overflow-hidden">
+                                <h4 class="font-medium truncate text-sm">Cliente Exemplo 1</h4>
+                                <p class="text-xs text-gray-500 dark:text-gray-300 truncate">Última mensagem...</p>
                             </div>
                         </li>
-                        <li class="conversation-item">
-                            <span class="user-avatar">J</span>
-                            <div class="user-info">
-                                <h4>João da Silva</h4>
-                                <p>Certo, vou verificar.</p>
+                        <li class="flex items-center p-3 cursor-pointer rounded-md hover:bg-gray-100 dark:hover:bg-gray-700 mb-1">
+                            <span class="w-10 h-10 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold mr-3 flex-shrink-0">J</span>
+                            <div class="flex flex-col overflow-hidden">
+                                <h4 class="font-medium truncate text-sm">João da Silva</h4>
+                                <p class="text-xs text-gray-500 dark:text-gray-300 truncate">Certo, vou verificar.</p>
                             </div>
                         </li>
                     </ul>
                 </div>
 
-                <div class="chat-main card">
-                    <div class="chat-header">
-                        <div class="chat-user-info">
-                            <span class="user-avatar">C</span>
-                            <h3>Cliente Exemplo 1</h3>
-                            <p>Online</p>
+                <div class="flex-grow flex flex-col bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden h-full">
+                    <div class="p-4 border-b border-gray-200 dark:border-gray-700 flex items-center">
+                        <span class="w-10 h-10 rounded-full bg-blue-600 dark:bg-blue-400 text-white flex items-center justify-center font-bold mr-3">C</span>
+                        <div class="flex flex-col">
+                            <h3 class="text-base font-semibold">Cliente Exemplo 1</h3>
+                            <p class="text-xs text-green-500">Online</p>
                         </div>
                     </div>
                     
-                    <div class="chat-messages" id="chatMessages">
-                        <div class="message client-msg">
-                            <p>Olá, estou com um problema no meu cadastro.</p>
-                            <span class="message-time">10:00 AM</span>
+                    <div class="flex-grow p-5 overflow-y-auto flex flex-col space-y-3" id="chatMessages">
+                        <div class="max-w-[70%] p-3 rounded-xl rounded-bl-sm self-start bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-50 shadow-sm">
+                            <p class="m-0">Olá, estou com um problema no meu cadastro.</p>
+                            <span class="block text-[0.65rem] mt-1 text-right opacity-80 text-gray-600 dark:text-gray-400">10:00 AM</span>
                         </div>
-                        <div class="message user-msg">
-                            <p>Bom dia! Pode me dar mais detalhes sobre o problema?</p>
-                            <span class="message-time">10:01 AM</span>
+                        <div class="max-w-[70%] p-3 rounded-xl rounded-br-sm self-end bg-blue-600 text-white dark:bg-blue-700 shadow-sm">
+                            <p class="m-0">Bom dia! Pode me dar mais detalhes sobre o problema?</p>
+                            <span class="block text-[0.65rem] mt-1 text-right opacity-80 text-white">10:01 AM</span>
                         </div>
-                        <div class="message client-msg">
-                            <p>Não consigo alterar meu email no perfil.</p>
-                            <span class="message-time">10:03 AM</span>
+                        <div class="max-w-[70%] p-3 rounded-xl rounded-bl-sm self-start bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-50 shadow-sm">
+                            <p class="m-0">Não consigo alterar meu email no perfil.</p>
+                            <span class="block text-[0.65rem] mt-1 text-right opacity-80 text-gray-600 dark:text-gray-400">10:03 AM</span>
                         </div>
                     </div>
 
-                    <div class="chat-input-area">
-                        <input type="text" id="chatInput" placeholder="Digite sua mensagem...">
-                        <button id="sendMessageBtn" class="btn primary-bg"><i class="fas fa-paper-plane"></i> Enviar</button>
+                    <div class="p-4 border-t border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 flex items-center">
+                        <input type="text" id="chatInput" placeholder="Digite sua mensagem..." class="flex-grow p-2.5 border border-gray-300 dark:border-gray-600 rounded-full text-sm dark:bg-gray-700 dark:text-white focus:outline-none focus:ring-2 focus:ring-blue-500 mr-2">
+                        <button id="sendMessageBtn" class="px-4 py-2 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-700 transition duration-150 flex items-center">
+                            <i class="fas fa-paper-plane mr-1"></i> Enviar
+                        </button>
                     </div>
                 </div>
             </div>
         </main>
     </div>
+    <div id="sidebar-overlay" class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40"></div>
     <script src="js/script.js"></script>
 </body>
 </html>

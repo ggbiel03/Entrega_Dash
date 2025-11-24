@@ -4,136 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Dashboard</title>
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="stylesheet" href="./dist/styles.css">
+    <link rel="stylesheet" href="dist/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-50">
     <div class="flex min-h-dvh">
-        
-        <aside id="sidebar"
-            class="bg-white dark:bg-gray-900 fixed inset-y-0 left-0 w-64 -translate-x-full md:translate-x-0 md:static md:flex min-h-screen border-r border-gray-200 dark:border-gray-700 flex-col transition-transform duration-300 z-40">
-            <div class="px-4 py-4 border-b border-gray-200 dark:border-gray-700">
-                <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100">App Logo</h2>
+        <aside class="w-[250px] shadow-lg bg-white dark:bg-gray-800 transition-[width,min-width] duration-300 ease flex-shrink-0 min-w-[250px] md:relative fixed h-dvh z-50 transform -translate-x-full md:translate-x-0" id="sidebar">
+            <div class="p-5 h-[60px] flex items-center border-b border-gray-200 dark:border-gray-700">
+                <h2 class="text-xl font-semibold text-blue-600 dark:text-blue-400">App Logo</h2>
             </div>
-
-            <nav class="mt-2">
-                <ul class="space-y-1">
-                    <li>
-                        <a href="index.html"
-                            class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition text-gray-700 dark:text-gray-200">
-                            <i class="fas fa-home"></i>
-                            <span>Home</span>
+            <nav class="p-0">
+                <ul class="list-none py-2 px-0">
+                    <li class="nav-item relative active transition-all duration-200">
+                        <a href="index.html" class="flex items-center p-3 px-5 bg-blue-600 dark:bg-blue-700 hover:bg-blue-800 whitespace-nowrap text-white">
+                            <i class="fas fa-home text-lg w-7"></i> 
+                            <span class="ml-2">Home</span>
                         </a>
                     </li>
-
-                    <!-- Ativo -->
-                    <li>
-                        <a href="graficos.html"
-                            class="flex items-center gap-3 px-4 py-3 rounded transition font-semibold bg-blue-50 text-blue-700 dark:bg-blue-500/10 dark:text-blue-400">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Gráficos</span>
+                    <li class="nav-item relative transition-all duration-200">
+                        <a href="graficos.html" class="flex items-center p-3 px-5 text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 whitespace-nowrap">
+                            <i class="fas fa-chart-line text-lg w-7"></i> 
+                            <span class="ml-2">Gráficos</span>
                         </a>
                     </li>
-
-                    <!-- Dropdown Contatos (estrutura base; JS já cuida do toggle) -->
-                    <li class="nav-item">
-                        <a href="contatos.html"
-                            class="flex items-center justify-between px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition dropdown-toggle">
-                            <span class="flex items-center gap-3">
-                                <i class="fas fa-address-book"></i>
-                                <span>Contatos</span>
-                            </span>
-                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                    <li class="nav-item relative transition-all duration-200">
+                        <a href="contatos.html" class="dropdown-toggle flex items-center p-3 px-5 text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer whitespace-nowrap">
+                            <i class="fas fa-address-book text-lg w-7"></i> 
+                            <span class="ml-2">Contatos</span> 
+                            <i class="fas fa-chevron-down dropdown-icon ml-auto text-sm transition-transform duration-300"></i>
                         </a>
-                        <ul class="dropdown-menu overflow-hidden transition-[max-height] duration-300 max-h-0">
-                            <li>
-                                <a href="contatos.html#cadastrar"
-                                    class="block px-12 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Cadastrar</a>
-                            </li>
-                            <li>
-                                <a href="contatos.html#importar"
-                                    class="block px-12 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Importar</a>
-                            </li>
+                        <ul class="dropdown-menu list-none bg-gray-50 dark:bg-gray-700 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <li><a href="contatos.html#cadastrar" class="block py-2 px-10 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600">Cadastrar</a></li>
+                            <li><a href="contatos.html#importar" class="block py-2 px-10 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600">Importar</a></li>
                         </ul>
                     </li>
-
-                    <li>
-                        <a href="atendimento.html"
-                            class="flex items-center gap-3 px-4 py-3 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition text-gray-700 dark:text-gray-200">
-                            <i class="fas fa-headset"></i>
-                            <span>Atendimento</span>
+                    <li class="nav-item relative transition-all duration-200">
+                        <a href="atendimento.html" class="flex items-center p-3 px-5 text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 whitespace-nowrap">
+                            <i class="fas fa-headset text-lg w-7"></i> 
+                            <span class="ml-2">Atendimento</span>
                         </a>
                     </li>
-
-                    <!-- Dropdown Cadastros -->
-                    <li class="nav-item">
-                        <a href="cadastros_gerais.html"
-                            class="flex items-center justify-between px-4 py-3 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 rounded transition dropdown-toggle">
-                            <span class="flex items-center gap-3">
-                                <i class="fas fa-cog"></i>
-                                <span>Cadastros Gerais</span>
-                            </span>
-                            <i class="fas fa-chevron-down dropdown-icon"></i>
+                    <li class="nav-item relative transition-all duration-200">
+                        <a href="cadastros_gerais.html" class="dropdown-toggle flex items-center p-3 px-5 text-gray-700 dark:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer whitespace-nowrap">
+                            <i class="fas fa-cog text-lg w-7"></i> 
+                            <span class="ml-2">Cadastros Gerais</span> 
+                            <i class="fas fa-chevron-down dropdown-icon ml-auto text-sm transition-transform duration-300"></i>
                         </a>
-                        <ul class="dropdown-menu overflow-hidden transition-[max-height] duration-300 max-h-0">
-                            <li>
-                                <a href="cadastros_gerais.html#usuarios"
-                                    class="block px-12 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Usuários</a>
-                            </li>
-                            <li>
-                                <a href="cadastros_gerais.html#times"
-                                    class="block px-12 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Times</a>
-                            </li>
-                            <li>
-                                <a href="cadastros_gerais.html#lead"
-                                    class="block px-12 py-2 text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800">Lead</a>
-                            </li>
+                        <ul class="dropdown-menu list-none bg-gray-50 dark:bg-gray-700 max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                            <li><a href="cadastros_gerais.html#usuarios" class="block py-2 px-10 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600">Usuários</a></li>
+                            <li><a href="cadastros_gerais.html#times" class="block py-2 px-10 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600">Times</a></li>
+                            <li><a href="cadastros_gerais.html#lead" class="block py-2 px-10 text-sm text-gray-700 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600">Lead</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </aside>
 
-        <main class=" flex grow flex-col">
-
-            <header class="bg-[#FFFFFF] py-0 px-[20px] h-[60px] flex items-center justify-between shadow-[0_1px_4px_rgba(0,0,0,0.05)] transition duration-300">
-		        <div class="flex items-center">
-                    <button class="bg-none border-none text-[1.5rem] text-[#2692f0] cursor-pointer mr-[20px]" id="toggle-sidebar-btn"><i class="fas fa-bars"></i></button>
-                    <h1>Página Inicial</h1>
+        <main class="flex-grow flex flex-col">
+            <header class="bg-white dark:bg-gray-800 h-[60px] flex items-center justify-between px-5 shadow-md sticky top-0 z-10 border-b border-gray-200 dark:border-gray-700">
+                <div class="flex items-center">
+                    <button class="bg-transparent border-none text-2xl text-blue-600 dark:text-blue-400 cursor-pointer mr-5 focus:outline-none" id="toggle-sidebar-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <h1 class="text-xl font-semibold text-gray-800 dark:text-gray-100">Página Inicial</h1>
                 </div>
                 
-                <button class="bg-none border-none font-[1.5rem] text-[#333] transition-colors duration-200 py-[5px] px-[10px] rounded-[5px] hover:color-[#2692f0]" id="theme-toggle-btn">
+                <button class="bg-transparent border-none text-xl text-gray-700 dark:text-gray-100 cursor-pointer transition-colors duration-200 p-2 rounded hover:text-blue-600 dark:hover:text-blue-400" id="theme-toggle-btn">
                     <i class="fas fa-sun"></i>
                 </button>
             </header>
             
-            <div class="flex p-[20px]">
-                <section class="bg-[#FFFFFF] p-[20px] rounded-[8px] shadow-[0_4px_10px_rgba(0, 0, 0, 0.05)] mb-[20px] transition duration-300 transition-shadow">
-                    <h2 class="mb-[15px] border-b-[#eee] pb-[5px] transition-colors duration-300 ">Bem-vindo(a) ao seu Dashboard!</h2>
+            <div class="p-5 flex-grow">
+                <section class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-lg mb-5">
+                    <h2 class="text-2xl text-blue-600 dark:text-blue-400 mb-3 pb-1 border-b-2 border-gray-200 dark:border-gray-700 font-semibold">Bem-vindo(a) ao seu Dashboard!</h2>
                     <p>Visão geral e acesso rápido às principais funcionalidades do sistema.</p>
                 </section>
-                <div class="grid gap-[20px] mb-[20px]">
-                    <div class="p-[20px] rounded-[8px] text-[#FFFFFF] text-center shadow-[0_4px_8px_rgba(0, 0, 0, 0.1)] bg-[#2692f0]">
-                        <i class="fas fa-users text-[1.5rem] mb-[10px]"></i>
-                        <h3 class="mb-[5px] text-[1.1rem]">Total de Leads</h3>
-                        <p class="text-[2rem] bold">12.450</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+                    <div class="p-5 rounded-lg shadow-xl text-white text-center bg-blue-600">
+                        <i class="fas fa-users text-4xl mb-2"></i>
+                        <h3 class="mb-1 text-lg font-medium">Total de Leads</h3>
+                        <p class="text-4xl font-bold">12.450</p>
                     </div>
-                    <div class="stat-card secondary-bg">
-                        <i class="fas fa-chart-pie"></i>
-                        <h3>Conversões</h3>
-                        <p>1.200</p>
+                    <div class="p-5 rounded-lg shadow-xl text-white text-center bg-yellow-600">
+                        <i class="fas fa-chart-pie text-4xl mb-2"></i>
+                        <h3 class="mb-1 text-lg font-medium">Conversões</h3>
+                        <p class="text-4xl font-bold">1.200</p>
                     </div>
-                    <div class="stat-card success-bg">
-                        <i class="fas fa-chart-bar"></i>
-                        <h3>Atendimentos</h3>
-                        <p>55 / Hoje</p>
+                    <div class="p-5 rounded-lg shadow-xl text-white text-center bg-green-600">
+                        <i class="fas fa-chart-bar text-4xl mb-2"></i>
+                        <h3 class="mb-1 text-lg font-medium">Atendimentos</h3>
+                        <p class="text-4xl font-bold">55 / Hoje</p>
                     </div>
                 </div>
-            </div>
-
+                </div>
         </main>
     </div>
+    
     <script src="js/script.js"></script>
+    <div id="sidebar-overlay" class="hidden md:hidden fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-40"></div>
 </body>
 </html>
